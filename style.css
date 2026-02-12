@@ -1,0 +1,356 @@
+body {
+  background: #16181a;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.main-bg {
+  background: #e9ecdf;
+  border-radius: 24px;
+  padding: 0;
+}
+
+/* Ensure the row children stretch to equal height */
+.row.align-items-stretch {
+  display: flex;
+}
+
+/* Forces the inner wrapper to fill the column height */
+.flex-grow-1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: If you want the bottom cards to expand to fill empty space 
+   so the very bottom edges align perfectly */
+.picks-card, .everyday-card:last-child {
+  flex-grow: 1;
+}
+
+.swirlzy-nav {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.08rem;
+  background: #e9ecdf;
+  border-radius: 18px;
+  padding: 1.5rem 2.5rem 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swirlzy-logo {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #228787;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.22em;
+}
+
+.navbar-links a {
+  position: relative;
+  display: inline-block;
+  color: #16181a;
+  text-decoration: none;
+  margin-right: 2.5rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.navbar-links a:last-child {
+  margin-right: 0;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: #228787; 
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.navbar-links a:hover::after,
+.navbar-links a:focus::after {
+  width: 100%;
+}
+
+.navbar-links a:hover,
+.navbar-links a:focus {
+  color: #228787; 
+}
+
+.rounded-card {
+  border-radius: 32px;
+  box-shadow: 0 5px 30px #b2b2b23a;
+  overflow: hidden;
+}
+
+/* Update these classes in style.css */
+
+.rounded-card, 
+.picks-card {
+  margin: 12px; /* Adds a small uniform margin to every square */
+  border-radius: 32px;
+  box-shadow: 0 5px 30px #b2b2b23a;
+  overflow: hidden;
+  /* Ensure the card takes up available space minus the margin */
+  width: calc(100% - 24px); 
+}
+
+/* Specific spacing for nested cards (like the one inside School) */
+.school-card .everyday-card {
+  margin: 15px 0 0 0; /* Only top margin for nested items */
+  width: 100%;
+}
+
+.sweet-bg {
+  background: #f9bb5a;
+  color: #fff;
+  font-family: 'Fredoka One', cursive;
+  border-radius: 32px;
+}
+
+.large-title {
+  font-size: 3.5rem;
+  line-height: 0.98;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 0.2em;
+  font-family: 'Fredoka One', cursive;
+}
+
+.sweet-img-stack img {
+  width: 300px;
+  margin-top: -38px;
+  margin-bottom: -24px;
+  border-radius: 28px;
+  border: 6px solid #fffbe7;
+  box-shadow: 0 4px 20px #b21d2880;
+  position: relative;
+  left: 55%;
+  top: 30%;
+}
+
+.sweet-score {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  color: #bea5a5;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  background: #ffe59d;
+  padding: 0.17em 1.2em;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.right-cards .rounded-card {
+  border-radius: 28px;
+}
+
+.school-card {
+  background: #7bc4f4;
+  color: #242436;
+  position: relative;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1rem;
+  z-index: 3;
+}
+
+.school-card .explore-btn {
+  background: #111c31;
+  color: #fffbe7;
+  border-radius: 18px;
+  font-weight: bold;
+  padding: 0.39em 1.3em;
+  font-size: 1.03em;
+  border: none;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+.school-card h4 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.school-card .explore-btn i {
+  font-size: 1.3em;
+  margin-left: 0.4em;
+}
+
+.everyday-card {
+  background: #f9bb5a;
+  color: #242436;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.everyday-card h4 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #242436;
+  margin-top: 1.1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.everyday-card .pie-img {
+  width: 120px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px #b21d2880;
+  position: relative;
+  left: 10px;
+  margin-bottom: 0.8em;
+}
+
+.picks-card {
+  background: #fff;
+  color: #242436;
+  border-radius: 32px;
+  padding: 1.6em 1.7em 1.1em 1.7em;
+  margin-bottom: 1.2em;
+  box-shadow: 0 2px 12px #90909044;
+}
+
+.picks-card h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #16181a;
+  letter-spacing: 2px;
+  margin-top: 0.8em;
+}
+
+.pick-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1em;
+}
+
+.pick-title {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.pick-title img {
+  width: 38px;
+  border-radius: 50%;
+  background: #f9bb5a;
+  border: 2px solid #e9ecdf;
+}
+
+.pick-name {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #242436;
+  margin-bottom: 0.1em;
+  letter-spacing: 1.1px;
+}
+
+.pick-desc {
+  color: #1e1e1e;
+  font-size: 1em;
+}
+
+/* Container Frame */
+.y2k-frame {
+  border-radius: 32px;
+  box-shadow: 0 10px 40px rgba(123, 196, 244, 0.2); /* Soft blue glow */
+  overflow: hidden;
+  margin: 12px;
+  width: calc(100% - 24px);
+}
+
+/* Titles & Text */
+.pixel-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 3px 3px 0px #7bc4f4; /* Retro 3D effect */
+}
+
+.pixel-heading {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.cyber-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  color: #d1dfe6;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Specific UI Elements */
+.corner-title {
+  position: absolute; 
+  top: 25px; 
+  right: 30px; 
+  font-family: 'Fredoka One', cursive; 
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.neon-btn {
+  background: #fffbe7;
+  color: #111c31;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px; /* Pill shape popular in Y2K */
+  font-weight: 900;
+  font-family: 'Fredoka One', cursive;
+  transition: transform 0.2s;
+}
+
+.neon-btn:hover {
+  transform: scale(1.05);
+  background: #7bc4f4;
+  color: white;
+}
+
+/* Responsive tweaks */
+@media (max-width: 890px) {
+  .main-bg {
+    padding: 0.3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .swirlzy-nav {
+    flex-direction: column;
+    gap: 1.1em;
+  }
+
+  .main-bg {
+    padding: 4px;
+  }
+
+  .large-title {
+    font-size: 2.2rem;
+  }
+
+  .rounded-card,
+  .picks-card {
+    border-radius: 18px;
+  }
+
+  .sidebar-right {
+    margin-top: 2.3em;
+  }
+}
